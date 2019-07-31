@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Adding Text" package="org.openfl.samples.addingtext" version="1.0.0" company="OpenFL" />
+	<app main="Main" path="Export" file="AddingText" />
+	<window width="960" height="640"/>
+	<source path="src" />
+
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+
+	<assets path="res" rename="assets" />
+	
+</project>

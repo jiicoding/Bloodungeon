@@ -1,7 +1,7 @@
 package com.xay.util;
 import com.xay.util.Renderer.Glitch;
 import flash.geom.Point;
-#if openfl
+//#if openfl
 import openfl.geom.Rectangle;
 import openfl.Lib;
 import openfl.display.Sprite;
@@ -10,16 +10,16 @@ import openfl.display.DisplayObject;
 import openfl.display.Bitmap;
 import openfl.display.PixelSnapping;
 import openfl.utils.ByteArray;
-#elseif flash
-import flash.geom.Rectangle;
-import flash.Lib;
-import flash.display.Sprite;
-import flash.display.BitmapData;
-import flash.display.DisplayObject;
-import flash.display.Bitmap;
-import flash.display.PixelSnapping;
-import flash.utils.ByteArray;
-#end
+//#elseif flash
+//import flash.geom.Rectangle;
+//import flash.Lib;
+//import flash.display.Sprite;
+//import flash.display.BitmapData;
+//import flash.display.DisplayObject;
+//import flash.display.Bitmap;
+//import flash.display.PixelSnapping;
+//import flash.utils.ByteArray;
+//#end
 import motion.Actuate;
 class Glitch {
 	var x : Float;

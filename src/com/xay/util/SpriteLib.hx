@@ -7,6 +7,7 @@ import haxe.ds.StringMap;
 import openfl.display.BitmapData;
 import openfl.geom.Point;
 import openfl.geom.Rectangle;
+import openfl.Assets;
 #elseif flash
 import flash.display.BitmapData;
 import flash.geom.Point;
@@ -32,10 +33,15 @@ class SpriteLib {
 	public static var slices = new StringMap<Slice>();
 	static var animDefs = new StringMap<AnimDef>();
 	#if openfl
+	public static function addBD(bdName:String, bd:BitmapData) {
+	// for openfl we want to register the bitmap data
+		//if(bds.exists(bdName)) return;
+		//bds.set(bdName, bd);
+	}
 	public static function sliceBD(path:String, sliceName:String, xOff:Int, yOff:Int, frameWid:Int, frameHei:Int, wid:Int=null, hei:Int=null, margin=0) {
 		var name = sliceName;
 		if(!bds.exists(path)) {
-			var bd = Assets.getBitmapData(path);
+			var bd = Assets.getBitmapData("assets/"+path+".png");
 			bds.set(name, bd);
 		}
 		var bd = bds.get(name);
